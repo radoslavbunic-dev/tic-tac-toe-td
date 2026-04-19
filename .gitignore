@@ -26,6 +26,7 @@ obj/
 *.pidb
 *.suo
 /*.sln
+/*.slnx
 *.user
 *.unityproj
 *.booproj
