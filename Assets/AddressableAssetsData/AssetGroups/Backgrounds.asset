@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Backgrounds
+  m_EditorClassIdentifier: 
+  m_GroupName: Backgrounds
+  m_GUID: 90a0f014d43bdf744a72515a964a3a71
+  m_SerializeEntries:
+  - m_GUID: 9107a5cc813b06d499b818b0d1d96753
+    m_Address: UIBackground1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - background
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c900ec61b7eb4ed4e88252bc7376db8f
+    m_Address: UIBackground2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - background
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: a18229e3d78ec664d86be353a7ab8a0d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 063df9505c4062e49bfdf89b2bb52467, type: 2}
+    - {fileID: 11400000, guid: 88c8ecdd66bcd734c861c8b9619f07f8, type: 2}
