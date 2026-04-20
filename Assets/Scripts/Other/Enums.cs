@@ -28,9 +28,10 @@ public enum WindowType
 public enum PopupType
 {
     None,
-    Settings = 1,
-    Stats = 2,
-    AreYouSure = 3,
+    Settings,
+    Stats,
+    PreGame,
+    AreYouSure,
 }
 
 public enum ScreenOrientation

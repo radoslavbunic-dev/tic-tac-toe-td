@@ -34,6 +34,15 @@ public class MainMenuState : GameState
         {
             return;
         }
+
+        UIPopups.ShowPopup(new PopupData()
+        {
+            Type = PopupType.PreGame,
+            Data = new PopupData()
+            {
+                SourceState = this,
+            },
+        });
     }
 
     void OnStatsButtonClicked()
