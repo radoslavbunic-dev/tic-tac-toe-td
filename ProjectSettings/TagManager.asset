@@ -41,8 +41,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: MovingPiece
+  - name: Board
     uniqueID: 4082097311
+    locked: 0
+  - name: Tile
+    uniqueID: 2946989417
     locked: 0
   m_RenderingLayers:
   - Default

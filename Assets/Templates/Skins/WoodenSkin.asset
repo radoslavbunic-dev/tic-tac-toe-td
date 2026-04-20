@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: WoodenSkin
   m_EditorClassIdentifier: Assembly-CSharp::SkinTemplate
   id: 1218737194
+  boardPrefab: {fileID: 8819003507879649107, guid: da449cd3ab49543778953ca549374b5a,
+    type: 3}
   boardSprite: {fileID: 21300000, guid: 6c3a1e5eadd1c4006bb28050b7e2a960, type: 3}
   xSprite: {fileID: -1703662213, guid: 0c5ceed8c40a3459c8890accee910c5f, type: 3}
   oSprite: {fileID: -1015565600, guid: 0c5ceed8c40a3459c8890accee910c5f, type: 3}

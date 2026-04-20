@@ -6,12 +6,14 @@ using UnityEngine;
 [Serializable]
 public class SkinTemplate : Template
 {
+    [SerializeField] GameObject boardPrefab;
     [SerializeField] Sprite boardSprite;
     [SerializeField] Sprite xSprite;
     [SerializeField] Sprite oSprite;
     [SerializeField] int order;
 
 
+    public GameObject BoardPrefab { get { return boardPrefab; } }
     public Sprite BoardSprite { get { return boardSprite; } }
     public Sprite XSprite { get { return xSprite; } }
     public Sprite OSprite { get { return oSprite; } }

@@ -19,7 +19,12 @@ public class SoundManager : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
+    }
 
+    void Start()
+    {
+        SetMusicOnOff(PlayerPrefs.GetInt(Prefs.MusicEnabled, 1) == 1);
+        SetSFXOnOff(PlayerPrefs.GetInt(Prefs.SfxEnabled, 1) == 1);
     }
 
     protected virtual void OnEnable()

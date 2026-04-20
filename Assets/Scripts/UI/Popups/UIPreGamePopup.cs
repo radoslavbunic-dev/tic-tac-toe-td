@@ -65,14 +65,18 @@ public class UIPreGamePopup : UIPopup
 
         startButton.onClick.SetListener(() =>
         {
-            // PlayerPrefs.SetInt("CurrentSkin", currentSkinId);
-            // PlayerPrefs.Save();
             if (!allSkins.TryGetValue(CurrentSkinId, out var skin))
             {
                 return;
             }
-            // GameSettings.Instance.BoardSkin = skin;
-            new StartGameState(skin).Enter(null);
+
+            IState sourceState = null;
+            if (Data != null)
+            {
+                sourceState = Data.SourceState;
+            }
+
+            new StartGameState(skin).Enter(sourceState);
         });
 
         base.Start();

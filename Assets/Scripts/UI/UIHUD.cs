@@ -36,10 +36,6 @@ public class UIHUD : UIWindow
 
     protected override void SetListeners()
     {
-        // menuButton.onClick.SetListener(() =>
-        // {
-        //     OnMenuButtonClicked?.Invoke(this);
-        // });
         base.SetListeners();
     }
 }

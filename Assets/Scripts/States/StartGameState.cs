@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartGameState : GameState
 {
@@ -17,6 +18,20 @@ public class StartGameState : GameState
     public override void Enter(IState fromState)
     {
         base.Enter(fromState);
+
+        GameSession.SelectedSkin = Skin;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.LoadSceneAsync(Constants.GameScene, LoadSceneMode.Single);
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name != Constants.GameScene)
+        {
+            return;
+        }
+
+        SceneManager.sceneLoaded -= OnSceneLoaded;
         UIWindows.ShowWindow(new()
         {
             Type = WindowType.HUD,
@@ -28,5 +43,12 @@ public class StartGameState : GameState
     {
         Window = (UIHUD)window;
         OnGameStarted?.Invoke();
+        new PlayState().Enter(this);
+    }
+
+    public override void Exit()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        base.Exit();
     }
 }

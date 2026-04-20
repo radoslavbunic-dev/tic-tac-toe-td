@@ -905,7 +905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5019608}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -955,6 +955,11 @@ PrefabInstance:
       propertyPath: m_text
       value: Close
       objectReference: {fileID: 0}
+    - target: {fileID: 4791190628633741093, guid: 6388d4e717d29b04dab1a22d059deaa1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 5577291300652535635, guid: 6388d4e717d29b04dab1a22d059deaa1,
         type: 3}
       propertyPath: m_Sprite
@@ -994,12 +999,12 @@ PrefabInstance:
     - target: {fileID: 7286632299927715556, guid: 6388d4e717d29b04dab1a22d059deaa1,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 350
+      value: 340
       objectReference: {fileID: 0}
     - target: {fileID: 7286632299927715556, guid: 6388d4e717d29b04dab1a22d059deaa1,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 170
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7286632299927715556, guid: 6388d4e717d29b04dab1a22d059deaa1,
         type: 3}

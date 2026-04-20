@@ -21,12 +21,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - background
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c900ec61b7eb4ed4e88252bc7376db8f
-    m_Address: UIBackground2
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - background
-    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: a18229e3d78ec664d86be353a7ab8a0d, type: 2}
   m_SchemaSet:
