@@ -44,7 +44,7 @@ TagManager:
   - name: Board
     uniqueID: 4082097311
     locked: 0
-  - name: Tile
+  - name: Cell
     uniqueID: 2946989417
     locked: 0
   m_RenderingLayers:

@@ -17,5 +17,7 @@ MonoBehaviour:
     type: 3}
   boardSprite: {fileID: 21300000, guid: e88f88b755f08495fb78a5a1396b62cb, type: 3}
   xSprite: {fileID: -324131639, guid: 0c5ceed8c40a3459c8890accee910c5f, type: 3}
+  xPrefab: {fileID: 8819003507879649107, guid: 71592c048d9b24143b12c8bc6fa7751d, type: 3}
   oSprite: {fileID: -1930811212, guid: 0c5ceed8c40a3459c8890accee910c5f, type: 3}
+  oPrefab: {fileID: 8819003507879649107, guid: 17b465ca7f5a04ab69f44b6134b7311f, type: 3}
   order: 2
