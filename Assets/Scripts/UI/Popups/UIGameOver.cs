@@ -27,7 +27,7 @@ public class UIGameOver : UIWindow
             gameStatusText.text = $"{gameOverData.GameStatus}";
         }
 
-        var formatedTime = Utils.ConvertTimeToSeconds(gameOverData.MatchDuration);
+        var formatedTime = Utils.ConvertTimeToMilliSeconds(gameOverData.MatchDuration);
         gameDurationText.text = $"{formatedTime}";
         totalMovesText.text = $"{gameOverData.TotalMoves}";
     }

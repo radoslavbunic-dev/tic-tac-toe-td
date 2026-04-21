@@ -13,6 +13,7 @@ public class GameOverState : GameState
     public override void Enter(IState fromState)
     {
         base.Enter(fromState);
+        UserStorage.SaveGame(GameOverData);
         UIWindows.ShowWindow(new()
         {
             Type = WindowType.GameOver,

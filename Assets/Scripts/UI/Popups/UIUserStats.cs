@@ -1,10 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
-using Newtonsoft.Json;
+using UnityEngine;
 
 public class UIUserStats : UIPopup
 {
@@ -17,11 +12,12 @@ public class UIUserStats : UIPopup
     public override void Init(PopupData data)
     {
         base.Init(data);
-        totalGamesTxt.text = "0";
-        totalGamesTxt.text = "0";
-        totalGamesTxt.text = "0";
-        totalGamesTxt.text = "0";
-        totalGamesTxt.text = "0";
+        var summary = UserStorage.GetSummary();
+        totalGamesTxt.text = summary.TotalGames.ToString();
+        winPlayer1Txt.text = summary.Player1Wins.ToString();
+        winPlayer2Txt.text = summary.Player2Wins.ToString();
+        totalDrawsTxt.text = summary.TotalDraws.ToString();
+        averageTimeTxt.text = Utils.ConvertTimeToMilliSeconds(summary.AverageMatchDurationSeconds);
     }
 
     protected override void SetListeners()

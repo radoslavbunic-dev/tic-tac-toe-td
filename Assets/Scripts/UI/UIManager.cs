@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class UIManager : MonoBehaviour
 {
@@ -23,7 +21,6 @@ public class UIManager : MonoBehaviour
         BootstrapManager.OnInitialized += OnInitialized;
         ViewController.OnOrientationChanged += OnViewChanged;
         LoadingPlaySceneState.OnPlaySceneLoaded += OnPlaySceneLoaded;
-
     }
 
     protected virtual void OnDisable()
@@ -57,7 +54,7 @@ public class UIManager : MonoBehaviour
     {
         if (orientation == ScreenOrientation.Portrait)
         {
-            canvasScaler.matchWidthOrHeight = 0.5f;
+            canvasScaler.matchWidthOrHeight = 0.58f;
         }
         else
         {

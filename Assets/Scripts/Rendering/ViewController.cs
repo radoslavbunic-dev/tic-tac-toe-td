@@ -43,6 +43,7 @@ public class ViewController : MonoBehaviour
             return;
         }
 
+        screenOrientation = orientation;
         OnOrientationChanged?.Invoke(screenOrientation);
     }
 
