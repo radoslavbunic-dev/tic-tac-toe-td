@@ -8,11 +8,9 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class UIManager : MonoBehaviour
 {
-    public static event Action<ScreenOrientation> OnOrientationChanged;
     [SerializeField] private CanvasScaler canvasScaler;
     [SerializeField] CanvasGroup fadeCanvas;
     [SerializeField] float fadeOutDuration = 1;
-    ScreenOrientation screenOrientation;
 
     void Awake()
     {
@@ -23,16 +21,20 @@ public class UIManager : MonoBehaviour
     protected virtual void OnEnable()
     {
         BootstrapManager.OnInitialized += OnInitialized;
+        ViewController.OnOrientationChanged += OnViewChanged;
+        LoadingPlaySceneState.OnPlaySceneLoaded += OnPlaySceneLoaded;
+
     }
 
     protected virtual void OnDisable()
     {
         BootstrapManager.OnInitialized -= OnInitialized;
+        ViewController.OnOrientationChanged -= OnViewChanged;
+        LoadingPlaySceneState.OnPlaySceneLoaded -= OnPlaySceneLoaded;
     }
 
     void OnInitialized()
     {
-        screenOrientation = GetScreenOrientation();
         StartCoroutine(FadeOut());
     }
 
@@ -51,32 +53,8 @@ public class UIManager : MonoBehaviour
         new MainMenuState().Enter(null);
     }
 
-    void Update()
+    void OnViewChanged(ScreenOrientation orientation)
     {
-        var orientation = GetScreenOrientation();
-        if (orientation == screenOrientation)
-        {
-            return;
-        }
-
-        ApplyOrientation(orientation);
-    }
-
-    ScreenOrientation GetScreenOrientation()
-    {
-        if (Screen.height >= Screen.width)
-        {
-            return ScreenOrientation.Portrait;
-        }
-        else
-        {
-            return ScreenOrientation.Landscape;
-        }
-    }
-
-    void ApplyOrientation(ScreenOrientation orientation)
-    {
-        screenOrientation = orientation;
         if (orientation == ScreenOrientation.Portrait)
         {
             canvasScaler.matchWidthOrHeight = 0.5f;
@@ -85,6 +63,10 @@ public class UIManager : MonoBehaviour
         {
             canvasScaler.matchWidthOrHeight = 0.0f;
         }
-        OnOrientationChanged?.Invoke(screenOrientation);
+    }
+
+    void OnPlaySceneLoaded()
+    {
+        new MainMenuState().Enter(null);
     }
 }

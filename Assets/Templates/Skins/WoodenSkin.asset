@@ -21,3 +21,13 @@ MonoBehaviour:
   oSprite: {fileID: -1015565600, guid: 0c5ceed8c40a3459c8890accee910c5f, type: 3}
   oPrefab: {fileID: 8819003507879649107, guid: 97202287b2abf43759cae5994d4f90a0, type: 3}
   order: 1
+  markSprites:
+  - Key: 1
+    Value: {fileID: -1703662213, guid: 0c5ceed8c40a3459c8890accee910c5f, type: 3}
+  - Key: 2
+    Value: {fileID: -1015565600, guid: 0c5ceed8c40a3459c8890accee910c5f, type: 3}
+  markPrefabs:
+  - Key: 1
+    Value: {fileID: 8819003507879649107, guid: 5f052a0aaf95a4224a82de833d4c22c9, type: 3}
+  - Key: 2
+    Value: {fileID: 8819003507879649107, guid: 97202287b2abf43759cae5994d4f90a0, type: 3}

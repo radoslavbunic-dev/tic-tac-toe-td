@@ -33,6 +33,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - popup
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bdf8e588acaf0474f832cf66a4f02994
+    m_Address: GameOver
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - popup
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bec6d6f015abd4ab8ac39e97384f8669
     m_Address: PreGame
     m_ReadOnly: 0

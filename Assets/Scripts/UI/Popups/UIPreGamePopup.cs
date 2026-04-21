@@ -69,14 +69,8 @@ public class UIPreGamePopup : UIPopup
             {
                 return;
             }
-
-            IState sourceState = null;
-            if (Data != null)
-            {
-                sourceState = Data.SourceState;
-            }
-
-            new StartGameState(skin).Enter(sourceState);
+            
+            new LoadingGameSceneState(skin, 3, 3).Enter(Data.SourceState);
         });
 
         base.Start();

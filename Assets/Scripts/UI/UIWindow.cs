@@ -7,8 +7,7 @@ using TMPro;
 
 public class UIWindow : MonoBehaviour, IUIElement
 {
-    public static Action<UIWindow> OnClosing;
-
+    public Action<UIWindow> OnClosing;
     public Action<UIWindow> OnWindowClosed;
 
     [SerializeField] protected GameObject panel;

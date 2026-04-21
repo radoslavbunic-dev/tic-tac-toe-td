@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 
 public class UISettings : UIPopup
-{
+{    
     [SerializeField] protected Toggle sfxToggle;
     [SerializeField] protected Toggle musicToggle;
 

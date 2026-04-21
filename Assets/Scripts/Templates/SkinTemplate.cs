@@ -6,19 +6,41 @@ using UnityEngine;
 [Serializable]
 public class SkinTemplate : Template
 {
+    [SerializeField] int order;
     [SerializeField] GameObject boardPrefab;
     [SerializeField] Sprite boardSprite;
-    [SerializeField] Sprite xSprite;
-    [SerializeField] GameObject xPrefab;
-    [SerializeField] Sprite oSprite;
-    [SerializeField] GameObject oPrefab;
-    [SerializeField] int order;
+    [SerializeField] MarkSpriteKeyPair[] markSprites;
+    [SerializeField] MarkGameObjectKeyPair[] markPrefabs;
 
+    public int Order { get { return order; } }
     public GameObject BoardPrefab { get { return boardPrefab; } }
     public Sprite BoardSprite { get { return boardSprite; } }
-    public Sprite XSprite { get { return xSprite; } }
-    public GameObject XPrefab { get { return xPrefab; } }
-    public Sprite OSprite { get { return oSprite; } }
-    public GameObject OPrefab { get { return oPrefab; } }
-    public int Order { get { return order; } }
+    public MarkSpriteKeyPair[] MarkSprites { get { return markSprites; } }
+    public MarkGameObjectKeyPair[] MarkPrefabs { get { return markPrefabs; } }
+
+    public Sprite GetMarkSprite(TicTacToeMark mark)
+    {
+        for (int i = 0; i < markSprites.Length; i++)
+        {
+            if (markSprites[i].Key == mark)
+            {
+                return markSprites[i].Value;
+            }
+        }
+        Debug.LogError($"Missing sprite for key: {mark} for skin: {Id}");
+        return null;
+    }
+
+    public GameObject GetMarkPrefab(TicTacToeMark mark)
+    {
+        for (int i = 0; i < markPrefabs.Length; i++)
+        {
+            if (markPrefabs[i].Key == mark)
+            {
+                return markPrefabs[i].Value;
+            }
+        }
+        Debug.LogError($"Missing prefab for key: {mark} for skin: {Id}");
+        return null;
+    }
 }

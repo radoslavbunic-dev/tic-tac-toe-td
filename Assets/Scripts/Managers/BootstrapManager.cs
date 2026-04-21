@@ -15,12 +15,11 @@ public class BootstrapManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(LoadPlayScene());
-        
     }
 
     IEnumerator LoadPlayScene()
     {
-        AsyncOperation loadOperation = SceneManager.LoadSceneAsync("PlayScene", LoadSceneMode.Single);
+        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(Constants.PlayScene, LoadSceneMode.Single);
         yield return loadOperation;
         OnInitialized?.Invoke();
         Destroy(gameObject);

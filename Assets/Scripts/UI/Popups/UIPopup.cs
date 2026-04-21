@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 
 public abstract class UIPopup : UIWindow
 {
@@ -26,11 +24,5 @@ public abstract class UIPopup : UIWindow
         {
             Close();
         }
-    }
-
-    public override void Close()
-    {
-        base.Close();
-        OnClosing?.Invoke(this);
     }
 }

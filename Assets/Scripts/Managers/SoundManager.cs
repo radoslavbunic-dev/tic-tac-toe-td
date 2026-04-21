@@ -4,9 +4,6 @@ using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
-    const float MixerMutedDb = -80f;
-    const float MixerUnmutedDb = 0f;
-
     [SerializeField] AudioTemplate defaultTemplate;
     [SerializeField] AudioSource musicAudioSource;
     [SerializeField] AudioSource uiAudioSource;
@@ -47,12 +44,12 @@ public class SoundManager : MonoBehaviour
 
     protected virtual void SetMusicOnOff(bool value)
     {
-        audioMixer.SetFloat("MusicVolume", value ? MixerUnmutedDb : MixerMutedDb);
+        audioMixer.SetFloat("MusicVolume", value ? Constants.MixerUnmutedDb : Constants.MixerMutedDb);
     }
 
     protected virtual void SetSFXOnOff(bool value)
     {
-        audioMixer.SetFloat("SFXVolume", value ? MixerUnmutedDb : MixerMutedDb);
+        audioMixer.SetFloat("SFXVolume", value ? Constants.MixerUnmutedDb : Constants.MixerMutedDb);
     }
 
     protected virtual void PlayMusic(string id)

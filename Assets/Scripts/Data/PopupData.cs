@@ -5,6 +5,7 @@ public class PopupData
 {
     public IState SourceState { get; set; }
     public PopupType Type { get; set; } = PopupType.None;
+    public Action<UIPopup> Callback { get; set; }
     public bool IsPersistent { get; set; } = false;
     public bool SkipCleanUp { get; set; } = false;
     public bool AllowMultiple { get; set; } = false;

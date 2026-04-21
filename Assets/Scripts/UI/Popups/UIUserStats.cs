@@ -6,8 +6,6 @@ using UnityEngine.UI;
 using TMPro;
 using Newtonsoft.Json;
 
-using UnityEngine.SocialPlatforms;
-
 public class UIUserStats : UIPopup
 {
     [SerializeField] protected TextMeshProUGUI totalGamesTxt;

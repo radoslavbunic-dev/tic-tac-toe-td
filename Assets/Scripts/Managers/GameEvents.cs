@@ -8,4 +8,5 @@ public static class GameEvents
     public static Action StopMusic;
     public static Action<bool> SetMusicOnOff;
     public static Action<bool> SetSFXOnOff;
+    public static Action<TicTacToeCell> BoardClick;
 }

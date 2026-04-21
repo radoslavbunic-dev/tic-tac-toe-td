@@ -41,7 +41,7 @@ public class UIWindows : MonoBehaviour
         if (operation.Status != AsyncOperationStatus.Succeeded)
         {
             Debug.Log("Failed to load window " + data.Type);
-            new MainMenuState().Enter(null);
+            new LoadingPlaySceneState().Enter(null);
             return;
         }
 

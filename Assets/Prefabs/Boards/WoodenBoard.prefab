@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1260101614096050317}
+  - component: {fileID: 591508804585905941}
   m_Layer: 0
   m_Name: Cell8
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -31,6 +32,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3520685756691924817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &591508804585905941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29887226148960002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a28b2a9ea0744278b5f013f5633d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TicTacToeCell
 --- !u!1 &432343206578639154
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,10 +53,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3291303951478188854}
+  - component: {fileID: 585395001571475899}
   m_Layer: 0
   m_Name: Cell3
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -62,6 +76,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3520685756691924817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &585395001571475899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432343206578639154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a28b2a9ea0744278b5f013f5633d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TicTacToeCell
 --- !u!1 &2945325844305356747
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,10 +97,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2494007237896518845}
+  - component: {fileID: 4501024100894987841}
   m_Layer: 0
   m_Name: Cell1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -93,6 +120,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3520685756691924817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4501024100894987841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2945325844305356747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a28b2a9ea0744278b5f013f5633d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TicTacToeCell
 --- !u!1 &3070187246525169538
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,10 +141,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6886791709498104868}
+  - component: {fileID: 4613652728669259220}
   m_Layer: 0
   m_Name: Cell5
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -124,6 +164,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3520685756691924817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4613652728669259220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3070187246525169538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a28b2a9ea0744278b5f013f5633d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TicTacToeCell
 --- !u!1 &4440968267524451251
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,10 +185,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2300499353862814039}
+  - component: {fileID: 6244196061087912281}
   m_Layer: 0
   m_Name: Cell7
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -155,6 +208,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3520685756691924817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6244196061087912281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4440968267524451251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a28b2a9ea0744278b5f013f5633d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TicTacToeCell
 --- !u!1 &5749329016797275218
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,10 +229,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 517229586151323184}
+  - component: {fileID: 6498096424689955136}
   m_Layer: 0
   m_Name: Cell9
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -186,6 +252,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3520685756691924817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6498096424689955136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749329016797275218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a28b2a9ea0744278b5f013f5633d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TicTacToeCell
 --- !u!1 &5926441245071299795
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,10 +273,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1444226000914493380}
+  - component: {fileID: 8526731886942051961}
   m_Layer: 0
   m_Name: Cell2
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -217,6 +296,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3520685756691924817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8526731886942051961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5926441245071299795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a28b2a9ea0744278b5f013f5633d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TicTacToeCell
 --- !u!1 &6969539728657411335
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,10 +317,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5201818832281489213}
+  - component: {fileID: 1793060426153688304}
   m_Layer: 0
   m_Name: Cell6
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -248,6 +340,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3520685756691924817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1793060426153688304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6969539728657411335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a28b2a9ea0744278b5f013f5633d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TicTacToeCell
 --- !u!1 &8819003507879649107
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,6 +363,7 @@ GameObject:
   - component: {fileID: 3520685756691924817}
   - component: {fileID: 3802100036242155930}
   - component: {fileID: 5518350173952828312}
+  - component: {fileID: 2182033874357738326}
   m_Layer: 0
   m_Name: WoodenBoard
   m_TagString: Untagged
@@ -362,15 +467,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Board
   cells:
-  - {fileID: 2494007237896518845}
-  - {fileID: 1444226000914493380}
-  - {fileID: 3291303951478188854}
-  - {fileID: 2296868139773250239}
-  - {fileID: 6886791709498104868}
-  - {fileID: 5201818832281489213}
-  - {fileID: 2300499353862814039}
-  - {fileID: 1260101614096050317}
-  - {fileID: 517229586151323184}
+  - {fileID: 4501024100894987841}
+  - {fileID: 8526731886942051961}
+  - {fileID: 585395001571475899}
+  - {fileID: 6860633961832484148}
+  - {fileID: 4613652728669259220}
+  - {fileID: 1793060426153688304}
+  - {fileID: 6244196061087912281}
+  - {fileID: 591508804585905941}
+  - {fileID: 6498096424689955136}
+--- !u!61 &2182033874357738326
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8819003507879649107}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.24, y: 10.24}
+    newSize: {x: 10.24, y: 10.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 10.24, y: 10.24}
+  m_EdgeRadius: 0
 --- !u!1 &9101381282509817341
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,10 +531,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2296868139773250239}
+  - component: {fileID: 6860633961832484148}
   m_Layer: 0
   m_Name: Cell4
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -402,3 +554,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3520685756691924817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6860633961832484148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9101381282509817341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a28b2a9ea0744278b5f013f5633d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TicTacToeCell

@@ -17,8 +17,8 @@ public class UISkinSlot : MonoBehaviour
     {
         Template = skin;
         tableImage.sprite = skin.BoardSprite;
-        xImage.sprite = skin.XSprite;
-        oImage.sprite = skin.OSprite;
+        xImage.sprite = skin.GetMarkSprite(TicTacToeMark.X);
+        oImage.sprite = skin.GetMarkSprite(TicTacToeMark.O);
         SetSelection(isSelected);
         selectionToggle.onValueChanged.SetListener((value) =>
         {

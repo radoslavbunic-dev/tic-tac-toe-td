@@ -21,7 +21,7 @@ MonoBehaviour:
     Value: {fileID: 8300000, guid: a3d23861d5dbe4fe8b18ed9d189cd767, type: 3}
   - Key: popup
     Value: {fileID: 8300000, guid: 9cf03e904b1094c3a872922aca35937c, type: 3}
-  - Key: place
+  - Key: move_played
     Value: {fileID: 8300000, guid: cb04f27e35bc749b3bb8fc6975f5dc0e, type: 3}
   - Key: win
     Value: {fileID: 8300000, guid: 4565a7425ccd941428c0027526323641, type: 3}

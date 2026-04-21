@@ -59,7 +59,9 @@ public class UIPopups : MonoBehaviour
             }
             Destroy(popup.gameObject);
         };
+        
         GameEvents.PlaySFX(AudioClipsId.Popup);
+        data.Callback?.Invoke(popup);
     }
 
     protected virtual void CleanUp()

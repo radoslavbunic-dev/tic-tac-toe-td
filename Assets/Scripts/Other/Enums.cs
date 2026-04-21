@@ -32,6 +32,7 @@ public enum PopupType
     Stats,
     PreGame,
     AreYouSure,
+    GameOver
 }
 
 public enum ScreenOrientation
@@ -39,4 +40,18 @@ public enum ScreenOrientation
     None,
     Portrait,
     Landscape
+}
+
+public enum GameStatus
+{
+    None = 0,
+    Win = 1,
+    Draw = 2,
+}
+
+public enum TicTacToeMark
+{
+    None = 0,
+    X = 1,
+    O = 2
 }
