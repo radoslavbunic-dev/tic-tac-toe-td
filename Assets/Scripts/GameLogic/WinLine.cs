@@ -4,12 +4,18 @@ using UnityEngine;
 public class WinLine : MonoBehaviour
 {
     [SerializeField] Transform line;
+    [SerializeField] GameObject effect;
     [SerializeField] float scaleDuration = 0.25f;
     [SerializeField] float regularLineOffset;
     [SerializeField] float diagonalLineOffset;
     [SerializeField] float lengthOffset = 0.5f;
 
     Coroutine animationRoutine;
+
+    void Awake()
+    {
+        effect.SetActive(false);
+    }
 
     public void Play(Vector3 start, Vector3 end)
     {
@@ -61,6 +67,12 @@ public class WinLine : MonoBehaviour
 
         scale.x = targetLength;
         line.localScale = scale;
+
+        Transform effectTransform = effect.transform;
+        effectTransform.position = adjustedStart;
+        effectTransform.rotation = line.rotation;
+        effectTransform.localScale = Vector3.one * line.localScale.x;
+        effect.SetActive(true);
     }
 
     float GetOffset(Vector3 start, Vector3 end)

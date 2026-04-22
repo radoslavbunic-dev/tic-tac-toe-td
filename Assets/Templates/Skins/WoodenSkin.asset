@@ -16,7 +16,7 @@ MonoBehaviour:
   order: 1
   boardPrefab: {fileID: 8819003507879649107, guid: da449cd3ab49543778953ca549374b5a,
     type: 3}
-  winLinePrefab: {fileID: 6527287996012006864, guid: 387b631ef2eb8407885e0d4ab9e0606c,
+  winLinePrefab: {fileID: 6527287996012006864, guid: abcbd930eb11b43db82d661f6d6eea59,
     type: 3}
   boardSprite: {fileID: 21300000, guid: 6c3a1e5eadd1c4006bb28050b7e2a960, type: 3}
   markSprites:

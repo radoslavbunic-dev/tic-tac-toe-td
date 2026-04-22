@@ -22,6 +22,12 @@ public class UISkinSlot : MonoBehaviour
         SetSelection(isSelected);
         selectionToggle.onValueChanged.SetListener((value) =>
         {
+            if (!value)
+            {
+                selectionToggle.SetIsOnWithoutNotify(true);
+                return;
+            }
+
             if (value)
             {
                 OnSelected?.Invoke(this);

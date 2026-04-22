@@ -48,7 +48,10 @@ public class UIGameOver : UIWindow
 
     IEnumerator WaitForWinLine()
     {
-        yield return new WaitForSeconds(winLineDelay);
+        if (waitForWinLine)
+        {
+            yield return new WaitForSeconds(winLineDelay);
+        }
         SetListeners();
         Open();
     }

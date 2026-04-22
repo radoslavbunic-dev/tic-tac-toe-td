@@ -47,5 +47,8 @@ TagManager:
   - name: Cell
     uniqueID: 2946989417
     locked: 0
+  - name: Effect
+    uniqueID: 2226869827
+    locked: 0
   m_RenderingLayers:
   - Default

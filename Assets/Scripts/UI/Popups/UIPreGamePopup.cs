@@ -97,6 +97,7 @@ public class UIPreGamePopup : UIPopup
             skinSlots[i].SetSelectionWithoutNotify(isSelected);
         }
 
+        ScrollToSlot(skinSlot.transform as RectTransform);
         CurrentSkinId = skinSlot.Template.Id;
         PlayerPrefs.SetInt("CurrentSkin", skinSlot.Template.Id);
         PlayerPrefs.Save();
