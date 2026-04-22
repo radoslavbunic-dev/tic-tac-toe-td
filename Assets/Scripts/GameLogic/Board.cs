@@ -85,7 +85,7 @@ public class Board : MonoBehaviour
         float bestSqr = float.PositiveInfinity;
         float minDistance = Constants.MinSquareDistance;
 
-        for (int i = 0; i < 9; i++)
+        for (int i = 0; i < cells.Length; i++)
         {
             if (cells[i] == null)
             {

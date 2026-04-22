@@ -27,7 +27,7 @@ public class TicTacToeMatch
 
     public bool IsEmpty(int index)
     {
-        return index >= 0 && index <= 8 && Grid[index] == TicTacToeMark.None;
+        return index >= 0 && index < Grid.Length && Grid[index] == TicTacToeMark.None;
     }
 
     public void SetMark(int index, TicTacToeMark mark)
