@@ -144,6 +144,31 @@ public class Board : MonoBehaviour
 
     void ShowWinLine(int[] winLine)
     {
+        if (winLine == null || winLine.Length < 3 || Skin == null)
+        {
+            return;
+        }
+
+        GameObject prefab = Skin.WinLinePrefab;
+        if (prefab == null)
+        {
+            return;
+        }
+
+        Transform startCell = GetCellTransform(winLine[0]);
+        Transform endCell = GetCellTransform(winLine[2]);
+        if (startCell == null || endCell == null)
+        {
+            return;
+        }
+
+        GameObject instance = Instantiate(prefab, transform);
+        WinLine line = instance.GetComponent<WinLine>();
+        if (line != null)
+        {
+            line.Play(startCell.position, endCell.position);
+        }
+
         GameEvents.PlaySFX(AudioClipsId.WinGame);
     }
 }

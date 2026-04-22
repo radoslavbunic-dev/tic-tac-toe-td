@@ -13,14 +13,12 @@ MonoBehaviour:
   m_Name: Default
   m_EditorClassIdentifier: Assembly-CSharp::SkinTemplate
   id: 1433860734
+  order: 0
   boardPrefab: {fileID: 8819003507879649107, guid: 8d615958f4fbb46358365954fe66a439,
     type: 3}
+  winLinePrefab: {fileID: 6527287996012006864, guid: 55f629801a2de4b6bb6baf67096e17c9,
+    type: 3}
   boardSprite: {fileID: 21300000, guid: 77cdd7b46abcf41f28999c7186c36a5e, type: 3}
-  xSprite: {fileID: -2132627484, guid: 0c5ceed8c40a3459c8890accee910c5f, type: 3}
-  xPrefab: {fileID: 8819003507879649107, guid: 51d588313b2f545128fda9c7aebe54bf, type: 3}
-  oSprite: {fileID: 1380850235, guid: 0c5ceed8c40a3459c8890accee910c5f, type: 3}
-  oPrefab: {fileID: 8819003507879649107, guid: 47eb6a209181448b4a48a08a91df55fc, type: 3}
-  order: 0
   markSprites:
   - Key: 1
     Value: {fileID: -2132627484, guid: 0c5ceed8c40a3459c8890accee910c5f, type: 3}

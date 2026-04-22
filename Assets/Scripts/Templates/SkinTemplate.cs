@@ -8,12 +8,14 @@ public class SkinTemplate : Template
 {
     [SerializeField] int order;
     [SerializeField] GameObject boardPrefab;
+    [SerializeField] GameObject winLinePrefab;
     [SerializeField] Sprite boardSprite;
     [SerializeField] MarkSpriteKeyPair[] markSprites;
     [SerializeField] MarkGameObjectKeyPair[] markPrefabs;
 
     public int Order { get { return order; } }
     public GameObject BoardPrefab { get { return boardPrefab; } }
+    public GameObject WinLinePrefab { get { return winLinePrefab; } }
     public Sprite BoardSprite { get { return boardSprite; } }
     public MarkSpriteKeyPair[] MarkSprites { get { return markSprites; } }
     public MarkGameObjectKeyPair[] MarkPrefabs { get { return markPrefabs; } }

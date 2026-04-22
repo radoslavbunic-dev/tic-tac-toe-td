@@ -15,6 +15,9 @@ public class UIGameOver : UIWindow
     [SerializeField] protected TextMeshProUGUI gameStatusText;
     [SerializeField] protected TextMeshProUGUI gameDurationText;
     [SerializeField] protected TextMeshProUGUI totalMovesText;
+    [SerializeField] protected float winLineDelay = 1;
+
+    bool waitForWinLine = false;
 
     public void Init(GameOverData gameOverData)
     {
@@ -30,6 +33,24 @@ public class UIGameOver : UIWindow
         var formatedTime = Utils.ConvertTimeToMilliSeconds(gameOverData.MatchDuration);
         gameDurationText.text = $"{formatedTime}";
         totalMovesText.text = $"{gameOverData.TotalMoves}";
+
+        if (gameOverData.WinningLine != null)
+        {
+            waitForWinLine = true;
+        }
+    }
+
+    protected override void Start()
+    {
+        StartCoroutine(nameof(WaitForWinLine));
+
+    }
+
+    IEnumerator WaitForWinLine()
+    {
+        yield return new WaitForSeconds(winLineDelay);
+        SetListeners();
+        Open();
     }
 
     protected override void SetListeners()
