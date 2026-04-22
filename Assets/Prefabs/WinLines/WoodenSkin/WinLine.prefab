@@ -14947,9 +14947,9 @@ MonoBehaviour:
   line: {fileID: 8350855720640391700}
   effect: {fileID: 6973146850323680675}
   scaleDuration: 0.25
-  regularLineOffset: -0.8
-  diagonalLineOffset: -1
-  lengthOffset: 0.62
+  regularLineOffset: -1
+  diagonalLineOffset: -1.2
+  lengthOffset: 0.52
 --- !u!1 &6973146850323680675
 GameObject:
   m_ObjectHideFlags: 0
