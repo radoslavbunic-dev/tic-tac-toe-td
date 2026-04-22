@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 
 public class Board : MonoBehaviour
 {
+    public static Action<TicTacToeCell> OnBoardClicked;
+
     [SerializeField] TicTacToeCell[] cells;
     public SkinTemplate Skin { get; private set; }
 
@@ -56,7 +59,7 @@ public class Board : MonoBehaviour
             return;
         }
 
-        GameEvents.BoardClick?.Invoke(clickedCell);
+        OnBoardClicked?.Invoke(clickedCell);
     }
 
     bool GetPointerWorldPointOnBoard(out Vector3 worldPoint)

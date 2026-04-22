@@ -1,12 +1,16 @@
-using System.Text.RegularExpressions;
+using System;
 using UnityEngine;
 
 public class TicTacToeManager : MonoBehaviour
 {
+    public static Action<TicTacToePlayer, TicTacToeCell> OnMovePlayed;
+    public static Action<float> OnMatchDurationUpdated;
+
     IState currentState;
     GameData gameData;
     TicTacToeMatch gameMatch;
     TicTacToePlayer activeTurnPlayer;
+    float matchDuration = 0;
 
     void OnEnable()
     {
@@ -26,15 +30,19 @@ public class TicTacToeManager : MonoBehaviour
         {
             return;
         }
-        activeTurnPlayer.AddTurnTime(Time.deltaTime);
-    }
 
+        var dt = Time.deltaTime;
+        matchDuration += dt;
+        activeTurnPlayer.AddTurnTime(dt);
+        OnMatchDurationUpdated?.Invoke(matchDuration);
+    }
 
     void OnGameSceneLoaded(GameData newGame)
     {
         gameData = newGame;
         gameMatch = new TicTacToeMatch(gameData);
         activeTurnPlayer = null;
+        matchDuration = 0;
 
         UIWindows.ShowWindow(new()
         {
@@ -50,6 +58,12 @@ public class TicTacToeManager : MonoBehaviour
         {
             movePlayedState.Player.AddMovePlayed();
             CheckGameStatus(movePlayedState.Player, movePlayedState.Cell);
+        }
+        else if (currentState is ForfeitState forfeitState)
+        {
+            var losingPlayer = forfeitState.Player;
+            var winMark = GetNextPlayerId(losingPlayer.Mark);
+            EndGame(GameStatus.Win, GetPlayer(winMark));
         }
     }
 
@@ -77,6 +91,8 @@ public class TicTacToeManager : MonoBehaviour
         }
 
         gameMatch.SetMark(cell.Index, player.Mark);
+        OnMovePlayed?.Invoke(player, cell);
+
         if (gameMatch.TryGetWinner(out TicTacToeMark winMark, out var winningLine))
         {
             EndGame(GameStatus.Win, GetPlayer(winMark), winningLine);
@@ -95,13 +111,11 @@ public class TicTacToeManager : MonoBehaviour
 
     void EndGame(GameStatus gameStatus, TicTacToePlayer winner = null, int[] winningLine = null)
     {
-        float matchDuration = 0;
         int totalMoves = 0;
         for (int i = 0; i < gameData.Players.Length; i++)
         {
             var player = gameData.Players[i];
             totalMoves += player.TotalMovesPlayed;
-            matchDuration += player.AccumulatedTimeSeconds;
         }
 
         var gameOverData = new GameOverData()

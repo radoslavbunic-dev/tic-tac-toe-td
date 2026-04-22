@@ -3,16 +3,19 @@ using UnityEngine;
 
 public class PlayState : GameState
 {
-    readonly TicTacToePlayer currentPlayer;
+    public TicTacToePlayer CurrentPlayer { get; private set; }
+    public bool IsWaitingForConfirmation { get; private set; }
 
     public PlayState(TicTacToePlayer activePlayer)
     {
-        currentPlayer = activePlayer;
+        CurrentPlayer = activePlayer;
     }
 
     public override void Enter(IState fromState)
     {
-        GameEvents.BoardClick += OnBoardClicked;
+        Board.OnBoardClicked += OnBoardClicked;
+        GameEvents.OpenSettings += OpenSettings;
+        GameEvents.OpenPlayScene += OpenPlayScene;
         base.Enter(fromState);
     }
 
@@ -20,24 +23,61 @@ public class PlayState : GameState
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            new GameMenuState().Enter(this);
+            OpenSettings();
             return;
         }
     }
 
     public override void Exit()
     {
-        GameEvents.BoardClick -= OnBoardClicked;
+        Board.OnBoardClicked -= OnBoardClicked;
+        GameEvents.OpenSettings -= OpenSettings;
+        GameEvents.OpenPlayScene -= OpenPlayScene;
         base.Exit();
     }
 
+    void OpenSettings()
+    {
+        new GameMenuState().Enter(this);
+    }
+
+    void OpenPlayScene()
+    {
+        IsWaitingForConfirmation = true;
+        var confirmationData = new ConfirmationData()
+        {
+            ConfirmCallback = new Action(() =>
+            {
+                new ForfeitState(CurrentPlayer).Enter(this);
+            }),
+            DeclineCallback = new Action(() =>
+            {
+                IsWaitingForConfirmation = false;
+            }),
+            ReverseButtons = true
+        };
+        UIPopups.ShowPopup(new PopupData()
+        {
+            Type = PopupType.AreYouSure,
+            Title = "Are You Sure?",
+            Message = "Game will end and you will lose",
+            Duration = 10,
+            Data = confirmationData
+        });
+    }
+
+
     void OnBoardClicked(TicTacToeCell cell)
     {
-        if (cell == null || currentPlayer == null)
+        if (IsWaitingForConfirmation)
+        {
+            return;
+        }
+        if (cell == null || CurrentPlayer == null || !cell.IsValidToPlaceMark())
         {
             return;
         }
         
-        new MovePlayedState(currentPlayer, cell).Enter(this);
+        new MovePlayedState(CurrentPlayer, cell).Enter(this);
     }
 }

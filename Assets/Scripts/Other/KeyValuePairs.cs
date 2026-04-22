@@ -23,3 +23,10 @@ public class MarkSpriteKeyPair
     public TicTacToeMark Key;
     public Sprite Value;
 }
+
+[Serializable]
+public class MarkTextKeyPair
+{
+    public TicTacToeMark Key;
+    public TextMeshProUGUI Value;
+}

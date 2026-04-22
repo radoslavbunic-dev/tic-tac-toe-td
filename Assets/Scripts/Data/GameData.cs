@@ -29,7 +29,7 @@ public class GameData
         Players = new TicTacToePlayer[marks.Count];
         for (int i = 0; i < marks.Count; i++)
         {
-            Players[i] = new TicTacToePlayer(marks[i], $"Player {i + 1}");
+            Players[i] = new TicTacToePlayer(marks[i], $"Player {i + 1}({marks[i]})");
         }
         Skin = skin;
     }
