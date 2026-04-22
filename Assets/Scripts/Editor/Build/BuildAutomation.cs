@@ -10,7 +10,7 @@ using UnityEngine;
 
 public static class BuildAutomation
 {
-    private const string WebGlBuildFolderName = "build";
+    private const string WebGlBuildFolderName = "docs";
     private const string MacBuildFolderName = "Client";
     private const string MacAppName = "TicTacToeRB.app";
 
